@@ -1,0 +1,89 @@
+<!-- <h2>Order Placed Successfully!</h2>
+<p>Your order has been placed and will be processed soon.</p>
+<a href="{% url 'product_list' %}">Go back to product list</a> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Success</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f39c12, #8e44ad); /* Linear gradient background */
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 1.5s ease-in-out forwards;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 0.5s forwards;
+        }
+
+        a:hover {
+            background-color: #fff;
+            color: #f39c12;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 1rem; /* Description font size */
+            color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Order Placed Successfully!</h2>
+    <p>Your order has been successfully placed. You will receive an email with your order details shortly.</p>
+    <a href="{% url 'product_list' %}">Go Back to Products</a>
+</body>
+</html>

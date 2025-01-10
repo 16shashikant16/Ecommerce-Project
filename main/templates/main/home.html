@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the E-commerce Project</h1>
+    <a href="{% url 'signup' %}">Sign Up</a> |
+    <a href="{% url 'login' %}">Login</a> |
+    <a href="{% url 'product_list' %}">View Products</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(#1edabb,#090979,#00d4ff);
+            /* background-size: cover; */
+            
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Additional styling for the container */
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white box */
+            display: inline-block;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the E-commerce Project</h1>
+        <a href="{% url 'signup' %}">Sign Up</a> |
+        <a href="{% url 'login' %}">Login</a> |
+        <a href="{% url 'product_list' %}">View Products</a>
+    </div>
+</body>
+</html>

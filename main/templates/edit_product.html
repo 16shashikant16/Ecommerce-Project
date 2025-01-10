@@ -1,0 +1,100 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f39c12, #8e44ad); /* Linear gradient background */
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        form p {
+            font-size: 0.8rem; /* Smaller font for description */
+            color: #333;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background: linear-gradient(90deg, #f39c12, #e67e22); /* Gradient button */
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            width: 100%;
+        }
+
+        form button:hover {
+            background: linear-gradient(90deg, #e67e22, #f39c12); /* Reverse gradient on hover */
+            transform: scale(1.05);
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #fff;
+            color: #f39c12;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="/products/">Back to Product List</a>
+</body>
+</html>
